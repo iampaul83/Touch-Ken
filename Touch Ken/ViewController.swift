@@ -10,7 +10,7 @@ import UIKit
 /// 測試KenImageView的使用
 class ViewController: UIViewController
 {
-    
+    @IBOutlet weak var instructionKen: KenImageView!
     @IBOutlet weak var instructionLabelHead: UILabel!
     @IBOutlet weak var instructionLabelBody: UILabel! {
         didSet {
@@ -29,6 +29,7 @@ class ViewController: UIViewController
         }
         instructionLabelHead.removeFromSuperview()
         instructionLabelBody.removeFromSuperview()
+        instructionKen.removeFromSuperview()
     }
     // UIResponder way
     // 連點兩下關閉說明文字
