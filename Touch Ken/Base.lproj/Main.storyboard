@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchKen" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SD9-q5-pCs">
+                                <rect key="frame" x="16" y="560" width="50" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Go left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Yx-Eh-zJI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-wo-wfg">
+                                <rect key="frame" x="524" y="560" width="60" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Go right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goRight:" destination="BYZ-38-t0r" eventType="touchDown" id="NOb-Km-v3f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="操作說明" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vV-KW-1vS">
+                                <rect key="frame" x="16" y="28" width="568" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="說明s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-PL-inD">
+                                <rect key="frame" x="16" y="55" width="568" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="MUr-T7-ajY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MUr-T7-ajY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="1" image="ken1" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-R6-EE4" customClass="KenImageView" customModule="TouchKen" customModuleProvider="target">
+                                <rect key="frame" x="167" y="72" width="265" height="488"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kfP-R6-EE4" secondAttribute="height" multiplier="58:107" id="tP9-7X-wb2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8vV-KW-1vS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="56P-rU-wJF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VCJ-PL-inD" secondAttribute="trailing" id="7s2-yk-GfP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zdH-wo-wfg" secondAttribute="bottom" constant="8" symbolic="YES" id="9Ff-gB-7PR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SD9-q5-pCs" secondAttribute="bottom" constant="8" symbolic="YES" id="HeJ-Yc-BaV"/>
+                            <constraint firstAttribute="centerX" secondItem="8vV-KW-1vS" secondAttribute="centerX" id="Mv6-7U-TdU"/>
+                            <constraint firstItem="VCJ-PL-inD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NHe-QG-SNf"/>
+                            <constraint firstItem="8vV-KW-1vS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="OeR-Oz-QEN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8vV-KW-1vS" secondAttribute="trailing" id="QZK-mD-mYd"/>
+                            <constraint firstItem="zdH-wo-wfg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WWU-wE-WZM"/>
+                            <constraint firstItem="zdH-wo-wfg" firstAttribute="top" secondItem="VCJ-PL-inD" secondAttribute="bottom" constant="8" symbolic="YES" id="Wmc-zr-zag"/>
+                            <constraint firstAttribute="centerY" secondItem="kfP-R6-EE4" secondAttribute="centerY" id="m4z-8e-oWO"/>
+                            <constraint firstItem="SD9-q5-pCs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mMX-P9-zMM"/>
+                            <constraint firstItem="kfP-R6-EE4" firstAttribute="top" secondItem="VCJ-PL-inD" secondAttribute="bottom" id="nrN-Si-dMU"/>
+                            <constraint firstItem="zdH-wo-wfg" firstAttribute="top" secondItem="kfP-R6-EE4" secondAttribute="bottom" id="ogo-Mp-7jf"/>
+                            <constraint firstItem="VCJ-PL-inD" firstAttribute="top" secondItem="8vV-KW-1vS" secondAttribute="bottom" constant="8" symbolic="YES" id="p7l-QH-RXa"/>
+                            <constraint firstAttribute="centerX" secondItem="kfP-R6-EE4" secondAttribute="centerX" id="pqf-gB-06q"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="m4z-8e-oWO"/>
+                                <exclude reference="Wmc-zr-zag"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xTq-oj-SD6" appends="YES" id="duV-my-FUk"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="instructionLabelBody" destination="VCJ-PL-inD" id="npd-kk-kDH"/>
+                        <outlet property="instructionLabelHead" destination="8vV-KW-1vS" id="T1I-Oa-uio"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xTq-oj-SD6">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="b38-NW-fSe"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ken1" width="58" height="107"/>
+    </resources>
+</document>
