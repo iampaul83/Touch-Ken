@@ -8,7 +8,7 @@
 
 import UIKit
 /// 測試KenImageView的使用
-class ViewController: UIViewController
+class ViewController: UIViewController, UIGestureRecognizerDelegate
 {
     @IBOutlet weak var instructionKen: KenImageView!
     @IBOutlet weak var instructionLabelHead: UILabel!
@@ -31,6 +31,7 @@ class ViewController: UIViewController
         instructionLabelBody.removeFromSuperview()
         instructionKen.removeFromSuperview()
     }
+    @IBOutlet weak var tapGestureRecognizer: UITapGestureRecognizer!
     // UIResponder way
     // 連點兩下關閉說明文字
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -47,6 +48,14 @@ class ViewController: UIViewController
     @IBAction func onTap(sender: UITapGestureRecognizer) {
         let location = sender.locationInView(view)
         addKen(at: location)
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        // 不在Ken身上重複生出Ken
+        if gestureRecognizer == tapGestureRecognizer {
+            return touch.view == view
+        }
+        return true
     }
     
     private func addKen(at location: CGPoint) {
