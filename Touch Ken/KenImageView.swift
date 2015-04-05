@@ -33,10 +33,21 @@ class KenImageView: UIImageView {
         self.center = center
         setup()
     }
-    /// 拉到storyboard會爆炸喔
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
+        userInteractionEnabled = false
+        alpha = 0.5
+    }
+    
+    @IBInspectable var speed: Double {
+        set {
+            animationDuration = newValue
+            startAnimating()
+        }
+        get {
+            return animationDuration
+        }
     }
     
     private func setup() {
@@ -46,7 +57,6 @@ class KenImageView: UIImageView {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: "onPinch:")
         pinchGesture.delegate = self
         mPinchGestureRecognizer = pinchGesture
-        
         addGestureRecognizer(pinchGesture)
         startAnimating()
         userInteractionEnabled = true

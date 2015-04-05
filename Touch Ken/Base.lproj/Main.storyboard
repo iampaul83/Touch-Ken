@@ -41,7 +41,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="操作說明" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vV-KW-1vS">
                                 <rect key="frame" x="16" y="28" width="568" height="19.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="說明s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-PL-inD">
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="215" id="MUr-T7-ajY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -59,10 +59,15 @@
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="1" image="ken1" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-R6-EE4" customClass="KenImageView" customModule="TouchKen" customModuleProvider="target">
-                                <rect key="frame" x="167" y="72" width="265" height="488"/>
+                                <rect key="frame" x="168" y="72" width="265" height="488"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kfP-R6-EE4" secondAttribute="height" multiplier="58:107" id="tP9-7X-wb2"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -96,6 +101,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="instructionKen" destination="kfP-R6-EE4" id="pa9-aU-js8"/>
                         <outlet property="instructionLabelBody" destination="VCJ-PL-inD" id="npd-kk-kDH"/>
                         <outlet property="instructionLabelHead" destination="8vV-KW-1vS" id="T1I-Oa-uio"/>
                     </connections>
