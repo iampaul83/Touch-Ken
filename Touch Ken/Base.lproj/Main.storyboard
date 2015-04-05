@@ -104,12 +104,14 @@
                         <outlet property="instructionKen" destination="kfP-R6-EE4" id="pa9-aU-js8"/>
                         <outlet property="instructionLabelBody" destination="VCJ-PL-inD" id="npd-kk-kDH"/>
                         <outlet property="instructionLabelHead" destination="8vV-KW-1vS" id="T1I-Oa-uio"/>
+                        <outlet property="tapGestureRecognizer" destination="xTq-oj-SD6" id="gLz-ig-hFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="xTq-oj-SD6">
                     <connections>
                         <action selector="onTap:" destination="BYZ-38-t0r" id="b38-NW-fSe"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="bR9-1b-rwq"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
