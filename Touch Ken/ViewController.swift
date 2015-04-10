@@ -34,13 +34,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate
     @IBOutlet weak var tapGestureRecognizer: UITapGestureRecognizer!
     // UIResponder way
     // 連點兩下關閉說明文字
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        if let touch = touches.anyObject() as? UITouch {
-            if instructionLabelHead != nil {
-                if touch.tapCount == 2 {
-                    removeInstructions()
-                }
-            }
+    // Swift 1.2 new Swift `Set` & new if let syntax
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch
+        where touch.tapCount == 2 && instructionLabelHead != nil {
+            removeInstructions()
         }
     }
     
